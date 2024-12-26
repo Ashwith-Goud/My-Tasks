@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>User Address</title>
+        <style>
+            body {
+                font-family: Arial;
+                margin: 20px;
+                padding: 20px;
+                background-color: #f4f4f4;
+                text-align: center;
+            }
+            h1 {
+                color: #333;
+            }
+            #address {
+                margin-top: 20px;
+                margin-left: 350px;
+                margin-right: 350px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                background-color: #fff;
+                border-radius: 20px;
+            }
+            #addressLink {
+                margin-top: 10px;
+                font-size: 16px;
+                text-decoration: none;
+                color: #007BFF;
+            }
+            #addressLink:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>User Address</h1>
+        <main>
+            <div id="address">Loading address...</div>
+            <a href="info.html" id="addressLink">Back to Home</a>
+        </main>
+        <script>
+            const userAddress = document.getElementById('address');
+        
+            try {
+                const userData = sessionStorage.getItem('selectedUser');
+                
+                if (userData) {
+                    const user = JSON.parse(userData);
+                    
+                    userAddress.innerHTML = `
+                        <p><strong>State:</strong> ${user.location.state}</p>
+                        <p><strong>City:</strong> ${user.location.city}</p>
+                        <p><strong>Country:</strong> ${user.location.country}</p>
+                    `;
+                } else {
+                    userAddress.textContent = "No address found. First fetch user data.";
+                }
+            } catch (error) {
+                console.error('Error loading user data:', error);
+                userAddress.textContent = "An error occurred while loading the address. Please try again.";
+            }
+        </script>
+    </body>
+</html>
