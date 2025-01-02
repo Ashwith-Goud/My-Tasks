@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    background-image: url(https://cdn.prod.website-files.com/5f2b1efb0f881760ffdc5c96/63c12849a1c7e9df64c819fc_programming-languages-shutterstock-1680857539-p-800.webp);
+  }
+  h1, p{
+    text-align: center;
+    color: rgb(255,255,255);
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto auto;
+    background: color-mix(in srgb, black 80%, blue 30%);
+    opacity: 0.9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .hear{
+    color: #FFFFFF;
+  }
+  label, p{
+    color: white;
+    display: block;
+  } 
+  #name-label, #email-label, #number-label {
+    display: block; 
+    margin-bottom: 10px; 
+  }

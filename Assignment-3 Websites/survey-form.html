@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1 id="title">Student Survey</h1>
+    <title>Survey Form</title>
+    <p id="description"> Thank you for helping me to learn</p>
+    <link rel="stylesheet" href="styles.css"> 
+  </head>
+  <body>
+    <form id="survey-form" class="survey-form">
+      <fieldset class="one">
+      <label id="name-label">Name : <input id="name" type="text" placeholder="Enter your name" required></label>
+      <label id="email-label">Email : <input id="email" type="email" placeholder="Enter your Email" required></label>
+      <label id="number-label"> Number : <input id="number" type="number" placeholder="Enter your number" min="1" max="10000000000000000"></label>
+      </fieldset>
+      <fieldset>
+        <label for="dropdown" class="hear">>How did you hear about this opportunity?</label>
+        <select id="dropdown" name="source" required>
+          <option value="Google" class= "option">Google</option>
+          <option value="friend" class= "option">Friend</option>
+          <option value="advertisement" class= "option">Advertisement</option>
+          <option value="social-media">Social Media</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <p>What is your preferred programming language?</p>
+        <label required><input type="radio" name="language" value="java" checked>Java</label>
+        <label><input type="radio" name="language" value="python">Python</label>
+        <label><input type="radio" name="language" value="c">C</label>
+      </fieldset>  
+      <fieldset>
+        <p>What are you interested in?</p>
+        <label><input type="checkbox" name="technologies" value="Frontend">FrontEnd</label>
+        <label><input type="checkbox" name="technologies" value="Backend">BackEnd</label>
+        <label><input type="checkbox" name="technologies" value="Fullstack">FullStack</label>
+      </fieldset>
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" placeholder="Enter your comment here"></textarea>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
