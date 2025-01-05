@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple iPhone Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Product-styles.css">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+            <span>Apple</span>
+        </div>
+        <nav id="nav-bar">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#pricing">Pricing</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About iPhone</h2>
+            <p>The iPhone is a line of smartphones developed and marketed by Apple that run iOS, the company's own mobile operating system. The first-generation iPhone was announced by then–Apple CEO Steve Jobs on January 9, 2007, at Macworld 2007, and launched later that year. Since then, Apple has annually released new iPhone models and iOS versions; the most recent models being the iPhone 16 and 16 Plus, and the higher-end iPhone 16 Pro and 16 Pro Max. As of January 1, 2024, more than 2.3 billion iPhones have been sold, making Apple the largest vendor of mobile phones in 2023.</p>
+        </section>
+
+        <section id="features">
+            <h2>iPhone Features</h2>
+            <ul>
+                <li><i class="fas fa-microchip"></i> Advanced A-series processors</li>
+                <li><i class="fas fa-tv"></i> Super Retina XDR display</li>
+                <li><i class="fas fa-camera"></i> Pro-grade camera system</li>
+                <li><i class="fas fa-mobile-alt"></i> iOS ecosystem integration</li>
+            </ul>
+        </section>        
+
+        <section id="pricing">
+            <h2>iPhone Pricing</h2>
+            <div class="pricing-cards">
+                <div class="card">
+                    <h3>iPhone 14</h3>
+                    <p>Price: $799</p>
+                    <input id="submit" type="submit" value="Select">
+                </div>
+                <div class="card">
+                    <h3>iPhone 14 Pro</h3>
+                    <p>Price: $999</p>
+                    <input id="submit" type="submit" value="Select">
+                </div>
+                <div class="card">
+                    <h3>iPhone 15</h3>
+                    <p>Price: $899</p>
+                    <input id="submit" type="submit" value="Select">
+                </div>
+                <div class="card">
+                    <h3>iPhone 15 Pro</h3>
+                    <p>Price: $1099</p>
+                    <input id="submit" type="submit" value="Select">
+                </div>
+            </div>
+        </section>
+
+        <section id="demo">
+            <h2>iPhone Demo</h2>
+            <iframe id="video" width="560" height="315" 
+                src="https://www.youtube.com/embed/eDqfg_LexCQ" 
+                title="YouTube video player" >
+            </iframe>
+        </section>
+
+        <section id="contact">
+            <h2>Stay Updated</h2>
+            <form id="form" action="https://www.apple.com/submit-email" method="post">
+                <label for="email">Email : </label>
+                <input id="email" type="email" name="email" placeholder="Enter your email" required>
+                <input id="submit" type="submit" value="Subscribe">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Apple Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>

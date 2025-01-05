@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="Document-styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Technical Documentation</header>
+        <a href="#Java" class="nav-link">Java</a>
+        <a href="#Javascript" class="nav-link">JavaScript</a>
+        <a href="#HTML_and_CSS" class="nav-link">HTML and CSS</a>
+        <a href="#Python_Basics" class="nav-link">Python Basics</a>
+        <a href="#APIs" class="nav-link">APIs</a>
+        <a href="#Databases" class="nav-link">Databases</a>
+        <a href="#Version_Control" class="nav-link">Version Control</a>
+        <a href="#Web_Security" class="nav-link">Web Security</a>
+        <a href="#ReactJS" class="nav-link">ReactJS</a>
+        <a href="#NodeJS" class="nav-link">NodeJS</a>
+        <a href="#Testing" class="nav-link">Testing</a>
+        <a href="#Data_Structures" class="nav-link">Data Structures</a>
+        <a href="#Networking" class="nav-link">Networking</a>
+    </nav>
+
+    <main id="main-doc">
+        <section id="Java" class="main-section">
+            <header>Java</header>
+            <p>Java is a widely-used object-oriented programming language developed by Sun Microsystems, which is now owned by Oracle. It is used for building cross-platform applications, including desktop, mobile, and web applications.</p>
+            <p>Java follows the principle of "Write Once, Run Anywhere," meaning that compiled Java code can run on any device that has the Java Runtime Environment (JRE) installed. This makes Java highly portable across different operating systems.</p>
+            <p>Java is a statically typed language, which means that variable types are defined during compile time, helping catch type-related errors early in the development process.</p>
+            <p>Java is also known for its rich set of libraries and frameworks that simplify complex tasks, such as Spring for enterprise-level applications and Android SDK for mobile development.</p>
+            <code>
+                // Simple Java Program
+                public class HelloWorld {
+                    public static void main(String[] args) {
+                        System.out.println("Hello, World!");
+                    }
+                }
+            </code>
+            <code>
+                // Java Program with Variables
+                public class VariablesExample {
+                    public static void main(String[] args) {
+                        int number = 5;
+                        String message = "The number is: ";
+                        System.out.println(message + number);
+                    }
+                }
+            </code>
+            <code>
+                // Java Program using If-Else Statement
+                public class IfElseExample {
+                    public static void main(String[] args) {
+                        int age = 18;
+                        if (age >= 18) {
+                            System.out.println("You are an adult.");
+                        } else {
+                            System.out.println("You are a minor.");
+                        }
+                    }
+                }
+            </code>
+        </section>
+        <section id="JavaScript" class="main-section">
+            <header>JavaScript</header>
+            <p>JavaScript is a dynamic, high-level programming language used primarily for building interactive websites. It runs in the browser and is widely used for client-side scripting to create dynamic, real-time user experiences.</p>
+            <p>JavaScript allows for the manipulation of HTML and CSS, enabling dynamic changes to the content and style of a webpage without needing to reload the page. It is essential for modern web development.</p>
+            <p>Unlike Java, JavaScript is a loosely typed language, meaning that variables do not need to be declared with a specific type. This makes JavaScript flexible but can also lead to runtime errors if not managed carefully.</p>
+            <p>JavaScript can be used on both the front-end (client-side) and back-end (server-side) of applications, particularly when using Node.js on the server-side to handle requests and responses.</p>
+            <code>
+                // Simple JavaScript Program
+                let message = "Hello, World!";
+                console.log(message);
+            </code>
+            <code>
+                // JavaScript Function Example
+                function add(a, b) {
+                    return a + b;
+                }
+                console.log(add(5, 10)); // Output: 15
+            </code>
+            <code>
+                // JavaScript Event Handling Example
+                document.getElementById("myButton").onclick = function() {
+                    alert("Button clicked!");
+                };
+            </code>
+        </section>
+        
+        <section id="HTML_and_CSS" class="main-section">
+            <header>HTML and CSS</header>
+            <p>HTML is the standard markup language for creating web pages.</p>
+            <p>CSS is a stylesheet language used to style web pages.</p>
+            <code>&lt;h1&gt;Title&lt;/h1&gt;</code>
+            <ul>
+                <li>HTML provides structure.</li>
+                <li>CSS enhances presentation.</li>
+            </ul>
+        </section>
+
+        <section id="Python_Basics" class="main-section">
+            <header>Python Basics</header>
+            <p>Python is an interpreted, high-level programming language.</p>
+            <p>It emphasizes readability and simplicity.</p>
+            <code>def hello():</code>
+            <ul>
+                <li>Simple syntax.</li>
+                <li>Vast library support.</li>
+            </ul>
+        </section>
+
+        <section id="APIs" class="main-section">
+            <header>APIs</header>
+            <p>APIs allow different software components to communicate.</p>
+            <p>REST APIs use HTTP for communication.</p>
+            <code>fetch('/api/data');</code>
+            <ul>
+                <li>APIs enable integration.</li>
+            </ul>
+        </section>
+
+        <section id="Databases" class="main-section">
+            <header>Databases</header>
+            <p>Databases store and manage data.</p>
+            <p>SQL is used to query relational databases.</p>
+            <code>SELECT * FROM users;</code>
+            <ul>
+                <li>Relational databases use tables.</li>
+            </ul>
+        </section>
+
+        <section id="Version_Control" class="main-section">
+            <header>Version Control</header>
+            <p>Version control systems help track code changes.</p>
+            <p>Git is the most popular version control tool.</p>
+            <code>git commit -m "Add new feature"</code>
+            <ul>
+                <li>Track changes.</li>
+                <li>Collaborate on projects.</li>
+            </ul>
+        </section>
+
+        <section id="Web_Security" class="main-section">
+            <header>Web Security</header>
+            <p>Web security ensures websites are safe from attacks.</p>
+            <p>Common threats include XSS, CSRF, and SQL injection.</p>
+            <code>Content-Security-Policy: default-src 'self';</code>
+            <ul>
+                <li>Secure headers.</li>
+                <li>Use HTTPS.</li>
+            </ul>
+        </section>
+
+        <section id="ReactJS" class="main-section">
+            <header>ReactJS</header>
+            <p>ReactJS is a JavaScript library for building user interfaces.</p>
+            <p>It uses a component-based architecture.</p>
+            <code>const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</code>
+            <ul>
+                <li>Reusable components.</li>
+                <li>Virtual DOM for fast updates.</li>
+            </ul>
+        </section>
+
+        <section id="NodeJS" class="main-section">
+            <header>NodeJS</header>
+            <p>NodeJS is a runtime environment for executing JavaScript on the server.</p>
+            <p>It is built on Chrome's V8 engine.</p>
+            <code>const http = require('http');</code>
+            <ul>
+                <li>Non-blocking I/O.</li>
+                <li>Supports real-time applications.</li>
+            </ul>
+        </section>
+
+        <section id="Testing" class="main-section">
+            <header>Testing</header>
+            <p>Testing ensures that code behaves as expected.</p>
+            <p>Common tools include Jest, Mocha, and Cypress.</p>
+            <code>npm test</code>
+            <ul>
+                <li>Unit tests.</li>
+                <li>Integration tests.</li>
+            </ul>
+        </section>
+
+        <section id="Data_Structures" class="main-section">
+            <header>Data Structures</header>
+            <p>Data structures organize and store data efficiently.</p>
+            <p>Examples include arrays, linked lists, and trees.</p>
+            <code>class Node { constructor(value) { this.value = value; } }</code>
+            <ul>
+                <li>Optimize algorithms.</li>
+                <li>Manage memory efficiently.</li>
+            </ul>
+        </section>
+
+        <section id="Algorithms" class="main-section">
+            <header>Algorithms</header>
+            <p>Algorithms are step-by-step instructions to solve problems.</p>
+            <p>Sorting and searching are common algorithm types.</p>
+            <code>function binarySearch(arr, target) { ... }</code>
+            <ul>
+                <li>Time complexity.</li>
+                <li>Space complexity.</li>
+            </ul>
+        </section>
+
+        <section id="Networking" class="main-section">
+            <header>Networking</header>
+            <p>Networking involves communication between systems.</p>
+            <p>Protocols like TCP/IP and HTTP are used.</p>
+            <code>ping www.example.com</code>
+            <ul>
+                <li>Data exchange.</li>
+                <li>Ensure reliability and speed.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
