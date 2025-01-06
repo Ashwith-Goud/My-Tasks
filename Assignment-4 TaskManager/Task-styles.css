@@ -1,0 +1,102 @@
+body {
+    font-family: Arial;
+    background-image: url(https://cdn1.iconfinder.com/data/icons/simple-basic-user-interface-vol-1/48/blank_board_empty_task-512.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  #all {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: gray;
+    border: 1px solid black; 
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
+  #task-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+
+  .task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+  }
+  
+  .task-item:last-child {
+    border-bottom: none;
+  }
+  
+  .task-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .task-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .task-item input[type="checkbox"] {
+    margin: 0;
+    margin-right: 10px;
+  }
+  
+  .remove-btn {
+    background-color: #ff4040;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .remove-btn:hover {
+    background-color: #e03030;
+  }
+  
+  #task-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  #add-task-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  #add-task-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .alert {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
