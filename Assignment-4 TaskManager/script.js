@@ -3,8 +3,11 @@ const taskInput = document.getElementById('task-input');
 const taskList = document.getElementById('task-list');
 
 function loadTasks() {
-  const tasks = JSON.parse(localStorage.getItem('tasks'));
-  tasks.forEach(task => createTask(task.text, task.completed));
+  const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+  //tasks.forEach(task => createTask(task.text, task.completed));
+  for(let i=0; i<tasks.length; i++){
+    createTask(tasks[i].text , tasks[i].completed);
+  }
 }
 
 function saveTasks() {
@@ -19,39 +22,38 @@ function saveTasks() {
 
 // Check if a task already exists
 function taskExists(text) {
-  const tasks = JSON.parse(localStorage.getItem('tasks'));
+  const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
   return tasks.some(task => task.text.toLowerCase() === text.toLowerCase()); 
 }
 
 function createTask(text, completed=false) {
-    
-    const li = document.createElement('li');
-    li.classList.add('task-item'); 
-  
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox'; 
-    checkbox.checked = completed; 
-    checkbox.addEventListener('change', saveTasks);
-  
-    const taskCont = document.createElement('span');
-    taskCont.textContent = text; 
-  
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'Remove'; 
-    removeButton.classList.add('remove-btn'); 
-  
-    checkbox.onclick = saveTasks; 
 
-    removeButton.onclick = () => {
-      li.remove(); 
-      saveTasks(); 
-    };
-  
+    const li = document.createElement('li');
+    li.classList.add('task-item');
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = completed;
+    checkbox.addEventListener('change', saveTasks);
+
+    const taskCont = document.createElement('span');
+    taskCont.textContent = text;
+
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.classList.add('remove-btn');
+
+    checkbox.onclick = saveTasks;
+
+    removeButton.onclick = function(){
+      li.remove();
+      saveTasks;
+    }
+
     li.append(checkbox, taskCont, removeButton);
     taskList.append(li);
   }
   
-
 addTaskButton.onclick = () => {
   const taskText = taskInput.value.trim();
   if (taskText) {
