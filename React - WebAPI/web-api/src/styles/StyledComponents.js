@@ -5,7 +5,7 @@ export const PageWrapper = styled.div`
   margin: 20px auto;
   padding: 30px;
   max-width: 1100px;
-  background: linear-gradient(to bottom, #ffffff, #f0f4f8); 
+  background: rgb(173,216,230);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
   border-radius: 12px;
 `;
@@ -26,6 +26,7 @@ export const Button = styled.button`
   font-size: 1.1rem;
   font-weight: bold;
   border-radius: 8px;
+  
 
   &:hover {
     background: linear-gradient(to right, #0056b3, #004085);
@@ -70,5 +71,50 @@ export const Address = styled.div`
   p {
     margin: 5px 0;
     color: #6c757d;
+  }
+`;
+
+export const StyledSearchInput = styled.input`
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+
+  &:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+`;
+
+export const PaginationControls = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    font-size: 16px;
+    margin: 0 10px;
   }
 `;

@@ -1,17 +1,18 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../context/Usercontext';
+import { Usercontext } from '../context/Usercontext';
 import { Button } from '../styles/StyledComponents';
 
-const FetchButton = () => {
-  const { setUsers, setLoading } = useContext(UserContext);
+const FetchButton = ({ setDataFetched }) => {
+  const { setUsers, setLoading } = useContext(Usercontext);
 
   const fetchData = async () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://randomuser.me/api/?results=30');
+      const response = await fetch('https://randomuser.me/api/?results=100');
       const data = await response.json();
       setUsers(data.results);
+      setDataFetched(true); // Set dataFetched to true after data is fetched
     } catch (error) {
       console.error('Error fetching data:', error);
     } finally {
@@ -23,3 +24,4 @@ const FetchButton = () => {
 };
 
 export default FetchButton;
+

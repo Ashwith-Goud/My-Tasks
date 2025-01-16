@@ -1,14 +1,16 @@
-import React, { createContext, useState } from 'react';
+import React, { useState } from 'react';
 
-export const UserContext = createContext();
+const Usercontext = React.createContext();
 
-export const UserProvider = ({ children }) => {
+const UserProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
 
   return (
-    <UserContext.Provider value={{ users, setUsers, loading, setLoading }}>
+    <Usercontext.Provider value={{ users, setUsers, loading, setLoading}}>
       {children}
-    </UserContext.Provider>
+    </Usercontext.Provider>
   );
 };
+
+export {Usercontext, UserProvider};
