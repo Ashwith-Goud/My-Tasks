@@ -1,75 +1,66 @@
 import React, { useContext, useState } from 'react';
 import { Usercontext } from '../context/Usercontext';
 import UserCard from './Usercard';
-import { CardGrid, StyledSearchInput, PaginationControls } from '../styles/StyledComponents';
+import { CardGrid, StyledSearchInput, PaginationControls, TopBar } from '../styles/StyledComponents';
 import FetchButton from './FetchButton';
 
 const UserList = () => {
-  const { users, loading } = useContext(Usercontext);
+  const { users, setUsers, loading, setLoading } = useContext(Usercontext);
   const [searchTerm, setSearchTerm] = useState('');
-  const [dataFetched, setDataFetched] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1); 
+  const [currentPage, setCurrentPage] = useState(1);
 
   const USERS_PER_PAGE = 30;
+  const TOTAL_USERS = 100; 
 
-  // Filter users by name
-  const filteredUsers = users.filter((user) =>
-    `${user.name.first} ${user.name.last}`.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const [dataFetched, setDataFetched] = useState(false); // Track if data is fetched
 
-  // Calculate total pages
-  const totalPages = Math.ceil(filteredUsers.length / USERS_PER_PAGE);
+  // Calculate total pages dynamically
+  const totalPages = Math.ceil(TOTAL_USERS / USERS_PER_PAGE);
 
   // Get users for the current page
-  const usersToDisplay = filteredUsers.slice((currentPage - 1) * USERS_PER_PAGE, currentPage * USERS_PER_PAGE);
+  const startIndex = (currentPage - 1) * USERS_PER_PAGE;
+  const endIndex = startIndex + USERS_PER_PAGE;
+  const usersToDisplay = users.slice(startIndex, endIndex);
 
-  const handlePageChange = (newPage) => {
-    if (newPage >= 1 && newPage <= totalPages) {
-      setCurrentPage(newPage);
-    }
-  };
+  // Filter current page users based on the search term
+  const filteredUsers = usersToDisplay.filter((user) =>
+    `${user.name.first} ${user.name.last}`.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   if (loading) return <p>Loading...</p>;
 
   return (
     <div>
-      {!dataFetched && <FetchButton setDataFetched={setDataFetched} />}
-
+      {!dataFetched && <FetchButton setUsers={setUsers} setLoading={setLoading} setDataFetched={setDataFetched} />}
       {dataFetched && (
         <>
-          <StyledSearchInput
-            type="text"
-            placeholder="Search by name"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-
-          <CardGrid>
-            {usersToDisplay.map((user, index) => (
-              <UserCard key={index} user={user} index={index} />
-            ))}
-          </CardGrid>
-
-          {/* Page Controls */}
-          {totalPages > 1 && (
+          <TopBar>
+            <StyledSearchInput
+              type="text"
+              placeholder="Search by name"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
             <PaginationControls>
               <button
-                onClick={() => handlePageChange(currentPage - 1)}
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-              >
-                Previous
-              </button>
+              > Previous </button>
               <span>
                 Page {currentPage} of {totalPages}
               </span>
               <button
-                onClick={() => handlePageChange(currentPage + 1)}
+                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                 disabled={currentPage === totalPages}
-              >
-                Next
-              </button>
+              > Next </button>
             </PaginationControls>
-          )}
+          </TopBar>
+
+          <CardGrid>
+            {filteredUsers.map((user, index) => (
+              <UserCard key={index} user={user} index={index} />
+            ))}
+          </CardGrid>
         </>
       )}
     </div>

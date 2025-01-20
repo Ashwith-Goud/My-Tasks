@@ -35,22 +35,58 @@ export const Button = styled.button`
 `;
 
 export const CardGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-top: 30px;
-  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 70px 50px;
+  margin-bottom: 50px;
 `;
 
 export const Card = styled.div`
+  width: 300px;
+  height: 250px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  border-radius: 12px;
+  background: #ffffff;
+
+  &:hover {
+    transform: rotateY(180deg); /* Flip the card */
+  }
+`;
+
+export const CardFront = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   padding: 20px;
   border: 1px solid #dee2e6;
   border-radius: 12px;
   background: #ffffff;
 
-  &:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);  
+  p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #495057;
   }
+`;
+
+export const CardBack = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  padding: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 12px;
+  background: #f8f9fa; 
+  font-size: 0.9rem;
+  line-height: 1.5;
+  transform: rotateY(180deg); /* Show the back when flipped */
 
   p {
     margin: 8px 0;
@@ -118,3 +154,22 @@ export const PaginationControls = styled.div`
     margin: 0 10px;
   }
 `;
+
+export const TopBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+export const ViewAddressSpan = styled.span`
+  color: #007bff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    color: #0056b3;
+  }
+`;
+

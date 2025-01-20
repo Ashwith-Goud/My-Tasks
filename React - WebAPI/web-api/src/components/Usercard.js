@@ -1,25 +1,45 @@
 import React, { useState } from 'react';
-import { Card, Address, Button } from '../styles/StyledComponents';
+import { Card, CardFront, CardBack, ViewAddressSpan} from '../styles/StyledComponents';
 
 const UserCard = ({ user, index }) => {
-  const [showAddress, setShowAddress] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleCardClick = () => {
+    setIsFlipped(!isFlipped); // Toggle card flip
+  };
 
   return (
-    <Card>
-      <p><strong>Name:</strong> {user.name.first} {user.name.last}</p>
-      <p><strong>Email:</strong> {user.email}</p>
-      <p><strong>Phone:</strong> {user.phone}</p>
-      <Button onClick={() => setShowAddress(!showAddress)}>
-        {showAddress ? 'Hide Address' : 'View Address'}
-      </Button>
-      {showAddress && (
-        <Address>
-          <p><strong>State:</strong> {user.location.state}</p>
-          <p><strong>City:</strong> {user.location.city}</p>
-          <p><strong>Country:</strong> {user.location.country}</p>
-        </Address>
-      )}
-    </Card>
+      <Card onClick={handleCardClick} style={{ transform: isFlipped ? 'rotateY(180deg)' : 'none' }}>
+        {/* Front of the card */}
+        <CardFront>
+          {!isFlipped && (
+            <>
+            <p><strong>Name:</strong> {user.name.first} {user.name.last}</p>
+            <p><strong>Email:</strong> {user.email}</p>
+            <p><strong>Phone:</strong> {user.phone}</p>
+            <ViewAddressSpan>
+              Click the Card to View Address
+            </ViewAddressSpan>
+            {/*
+            <Button onClick={toggleAddress}>
+              {showAddress ? 'Hide Address' : 'View Address'}
+            </Button>
+            */}
+            </>
+          )}
+          </CardFront>
+
+        {/* Back of the card - Address */}
+        <CardBack>
+          {isFlipped && (
+            <div>
+              <p><strong>State:</strong> {user.location.state}</p>
+              <p><strong>City:</strong> {user.location.city}</p>
+              <p><strong>Country:</strong> {user.location.country}</p>
+            </div>
+          )}
+        </CardBack>
+      </Card>
   );
 };
 
