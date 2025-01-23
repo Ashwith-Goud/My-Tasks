@@ -25,7 +25,7 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 6px;
   
 
   &:hover {
