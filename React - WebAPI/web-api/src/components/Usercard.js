@@ -10,7 +10,6 @@ const UserCard = ({ user, index }) => {
 
   return (
       <Card onClick={handleCardClick} style={{ transform: isFlipped ? 'rotateY(180deg)' : 'none' }}>
-        {/* Front of the card */}
         <CardFront>
           {!isFlipped && (
             <>
@@ -29,7 +28,6 @@ const UserCard = ({ user, index }) => {
           )}
           </CardFront>
 
-        {/* Back of the card - Address */}
         <CardBack>
           {isFlipped && (
             <div>

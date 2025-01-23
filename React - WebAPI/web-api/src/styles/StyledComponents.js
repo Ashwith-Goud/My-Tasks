@@ -53,7 +53,7 @@ export const Card = styled.div`
   background: #ffffff;
 
   &:hover {
-    transform: rotateY(180deg); /* Flip the card */
+    transform: rotateY(180deg); 
   }
 `;
 
@@ -86,7 +86,7 @@ export const CardBack = styled.div`
   background: #f8f9fa; 
   font-size: 0.9rem;
   line-height: 1.5;
-  transform: rotateY(180deg); /* Show the back when flipped */
+  transform: rotateY(180deg); 
 
   p {
     margin: 8px 0;

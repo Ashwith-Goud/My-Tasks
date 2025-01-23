@@ -14,7 +14,6 @@ const UserList = () => {
 
   const [dataFetched, setDataFetched] = useState(false); // Track if data is fetched
 
-  // Calculate total pages dynamically
   const totalPages = Math.ceil(TOTAL_USERS / USERS_PER_PAGE);
 
   // Get users for the current page
