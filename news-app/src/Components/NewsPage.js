@@ -26,8 +26,6 @@ const NewsPage = ({ category, language }) => {
 
   if (isLoading) return <p>Loading news...</p>;
   if (error) return <p>Error loading news: {error.message}</p>;
-
-  // Ensure proper structure of data 
   const articles = data && data.data ? data.data : [];
 
   return (
