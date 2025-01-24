@@ -8,11 +8,10 @@ const UserList = () => {
   const { users, setUsers, loading, setLoading } = useContext(Usercontext);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [dataFetched, setDataFetched] = useState(false); // Track if data is fetched
 
   const USERS_PER_PAGE = 30;
   const TOTAL_USERS = 100; 
-
-  const [dataFetched, setDataFetched] = useState(false); // Track if data is fetched
 
   const totalPages = Math.ceil(TOTAL_USERS / USERS_PER_PAGE);
 
@@ -49,7 +48,7 @@ const UserList = () => {
                 Page {currentPage} of {totalPages}
               </span>
               <button
-                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                onClick={() => setCurrentPage((prev) => Math.min(prev + 1,totalPages))}
                 disabled={currentPage === totalPages}
               > Next </button>
             </PaginationControls>
@@ -67,3 +66,4 @@ const UserList = () => {
 };
 
 export default UserList;
+
