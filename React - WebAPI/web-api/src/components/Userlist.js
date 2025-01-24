@@ -29,9 +29,7 @@ const UserList = () => {
 
   return (
     <div>
-      {!dataFetched && <FetchButton setUsers={setUsers} setLoading={setLoading} setDataFetched={setDataFetched} />}
-      {dataFetched && (
-        <>
+      {dataFetched ? <>
           <TopBar>
             <StyledSearchInput
               type="text"
@@ -59,8 +57,8 @@ const UserList = () => {
               <UserCard key={index} user={user} index={index} />
             ))}
           </CardGrid>
-        </>
-      )}
+        </> : <FetchButton setUsers={setUsers} setLoading={setLoading} setDataFetched={setDataFetched} />}
+      
     </div>
   );
 };

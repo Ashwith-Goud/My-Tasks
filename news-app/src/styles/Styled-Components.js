@@ -18,6 +18,12 @@ export const Navbar = styled.nav`
       color: #00d1ff;
       text-decoration: none;
     }
+
+    &:focus,
+    &:active {
+      color: #00d1ff; 
+      border-bottom: 2px solid #00d1ff;
+    }
   }
 `;
 
@@ -40,6 +46,9 @@ export const NewsList = styled.ul`
 export const NewsItem = styled.li`
   padding: 1.5rem;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
@@ -80,6 +89,7 @@ export const LanguageButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
 
+
   &:hover {
     background-color: #0056b3;
     transform: scale(1.05);
@@ -87,6 +97,7 @@ export const LanguageButton = styled.button`
 
   &:focus {
     outline: none;
+    border: 2px solid white; 
     box-shadow: 3px rgba(0, 123, 255, 0.5);
   }
 
@@ -96,25 +107,16 @@ export const LanguageButton = styled.button`
   }
 `;
 
-export const SaveButton = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff; 
+export const ToggleButton = styled.button`
+  width: 120px; 
+  height: 40px;
+  background-color: ${(props) => (props.isSaved ? '#dc3545' : '#007bff')}; 
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  margin-left: 8px;
-`;
-
-export const RemoveButton = styled.button`
-  padding: 5px 10px;
-  background-color: #dc3545;  
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 8px;
+  margin-left: 20px;
 `;
 
 export const SavedLinkItem = styled.li`
@@ -127,6 +129,33 @@ export const SavedLinkItem = styled.li`
   &:hover {
     background-color: #f7f7f7;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+`;
+
+export const ClearButton = styled.button`
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #a71d2a;
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px #dc3545;
+  }
+
+  &:active {
+    background-color: #800e1a;
+    transform: scale(0.98);
   }
 `;
 

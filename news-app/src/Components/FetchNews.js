@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const fetchNews = async (category, language) => {
-  const API_TOKEN = process.env.REACT_APP_NEWS_API_TOKEN;
+  const API_TOKEN = process.env.REACT_APP_NEWS_API_TOKEN2;
 
   try {
     const response = await axios.get('https://api.thenewsapi.com/v1/news/all', {
