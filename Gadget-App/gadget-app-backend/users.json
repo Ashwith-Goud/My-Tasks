@@ -1,0 +1,131 @@
+[
+  {
+    "username": "user1",
+    "password": "user123",
+    "role": "user",
+    "orders": [
+      {
+        "id": 103,
+        "title": "MacBook Pro 14",
+        "category": "laptops",
+        "price": 1999.99,
+        "user": "user1",
+        "isConfirmed": true,
+        "orderDate": "2025-02-02T06:55:47.902Z"
+      },
+      {
+        "id": 105,
+        "title": "Apple Watch Series 7",
+        "category": "accessories",
+        "price": 399.99,
+        "user": "user1",
+        "isConfirmed": true,
+        "orderDate": "2025-02-02T06:59:26.197Z"
+      },
+      {
+        "id": 114,
+        "title": "Asus ROG Zephyrus G14",
+        "category": "laptops",
+        "price": 1499.99,
+        "user": "user1",
+        "isConfirmed": true,
+        "orderDate": "2025-02-02T07:44:22.001Z"
+      },
+      {
+        "id": 102,
+        "title": "Samsung Galaxy S21",
+        "category": "smartphones",
+        "price": 799.99,
+        "user": "user1",
+        "isConfirmed": true,
+        "orderDate": "2025-02-02T08:52:28.843Z"
+      },
+      {
+        "id": 103,
+        "title": "MacBook Pro 14",
+        "category": "laptops",
+        "price": 1999.99,
+        "user": "user1",
+        "isConfirmed": false,
+        "orderDate": "2025-02-02T10:03:37.793Z"
+      },
+      {
+        "id": 130,
+        "title": "Apple Magic Mouse 2",
+        "category": "accessories",
+        "price": 79.99,
+        "user": "user1",
+        "isConfirmed": true,
+        "orderDate": "2025-02-02T10:09:05.769Z"
+      }
+    ]
+  },
+  {
+    "username": "user2",
+    "password": "user456",
+    "role": "user",
+    "orders": [
+      {
+        "id": 111,
+        "title": "Samsung Galaxy Note 20",
+        "category": "smartphones",
+        "price": 949.99,
+        "user": "user2",
+        "isConfirmed": true,
+        "orderDate": "2025-02-02T08:58:33.770Z"
+      },
+      {
+        "id": 114,
+        "title": "Asus ROG Zephyrus G14",
+        "category": "laptops",
+        "price": 1499.99,
+        "user": "user2",
+        "isConfirmed": false,
+        "orderDate": "2025-02-02T08:58:37.642Z"
+      }
+    ]
+  },
+  {
+    "username": "admin",
+    "password": "admin123",
+    "role": "admin",
+    "orders": [
+      {
+        "id": 114,
+        "title": "Asus ROG Zephyrus G14",
+        "category": "laptops",
+        "price": 1499.99,
+        "user": "user1",
+        "isConfirmed": true,
+        "orderDate": "2025-02-02T07:44:22.001Z"
+      },
+      {
+        "id": 102,
+        "title": "Samsung Galaxy S21",
+        "category": "smartphones",
+        "price": 799.99,
+        "user": "user1",
+        "isConfirmed": true,
+        "orderDate": "2025-01-29T08:52:28.843Z"
+      },
+      {
+        "id": 111,
+        "title": "Samsung Galaxy Note 20",
+        "category": "smartphones",
+        "price": 949.99,
+        "user": "user2",
+        "isConfirmed": true,
+        "orderDate": "2025-01-15T08:58:33.770Z"
+      },
+      {
+        "id": 130,
+        "title": "Apple Magic Mouse 2",
+        "category": "accessories",
+        "price": 79.99,
+        "user": "user1",
+        "isConfirmed": true,
+        "orderDate": "2025-02-02T10:09:05.769Z"
+      }
+    ]
+  }
+]

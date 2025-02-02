@@ -1,0 +1,184 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "title": "iPhone 13 Pro",
+      "category": "smartphones",
+      "price": 999.99
+    },
+    {
+      "id": 102,
+      "title": "Samsung Galaxy S21",
+      "category": "smartphones",
+      "price": 799.99
+    },
+    {
+      "id": 103,
+      "title": "MacBook Pro 14",
+      "category": "laptops",
+      "price": 1999.99
+    },
+    {
+      "id": 104,
+      "title": "Dell XPS 13",
+      "category": "laptops",
+      "price": 1499.99
+    },
+    {
+      "id": 105,
+      "title": "Apple Watch Series 7",
+      "category": "accessories",
+      "price": 399.99
+    },
+    {
+      "id": 106,
+      "title": "Sony WH-1000XM4 Headphones",
+      "category": "accessories",
+      "price": 348.00
+    },
+    {
+      "id": 107,
+      "title": "Google Pixel 6",
+      "category": "smartphones",
+      "price": 599.99
+    },
+    {
+      "id": 108,
+      "title": "Lenovo ThinkPad X1 Carbon",
+      "category": "laptops",
+      "price": 1799.99
+    },
+    {
+      "id": 109,
+      "title": "Bose QuietComfort 35 II",
+      "category": "accessories",
+      "price": 299.99
+    },
+    {
+      "id": 110,
+      "title": "Apple AirPods Pro",
+      "category": "accessories",
+      "price": 249.99
+    },
+    {
+      "id": 111,
+      "title": "Samsung Galaxy Note 20",
+      "category": "smartphones",
+      "price": 949.99
+    },
+    {
+      "id": 112,
+      "title": "OnePlus 9 Pro",
+      "category": "smartphones",
+      "price": 1069.99
+    },
+    {
+      "id": 113,
+      "title": "HP Spectre x360",
+      "category": "laptops",
+      "price": 1699.99
+    },
+    {
+      "id": 114,
+      "title": "Asus ROG Zephyrus G14",
+      "category": "laptops",
+      "price": 1499.99
+    },
+    {
+      "id": 115,
+      "title": "Apple AirPods Max",
+      "category": "accessories",
+      "price": 549.99
+    },
+    {
+      "id": 116,
+      "title": "JBL Charge 4 Bluetooth Speaker",
+      "category": "accessories",
+      "price": 179.99
+    },
+    {
+      "id": 117,
+      "title": "Google Pixel 5",
+      "category": "smartphones",
+      "price": 699.99
+    },
+    {
+      "id": 118,
+      "title": "Microsoft Surface Laptop 4",
+      "category": "laptops",
+      "price": 1399.99
+    },
+    {
+      "id": 119,
+      "title": "Bose SoundLink Revolve+ Bluetooth Speaker",
+      "category": "accessories",
+      "price": 329.99
+    },
+    {
+      "id": 120,
+      "title": "Fitbit Charge 5",
+      "category": "accessories",
+      "price": 179.95
+    },
+    {
+      "id": 121,
+      "title": "iPhone 14 Pro Max",
+      "category": "smartphones",
+      "price": 1099.99
+    },
+    {
+      "id": 122,
+      "title": "Samsung Galaxy Z Fold 4",
+      "category": "smartphones",
+      "price": 1799.99
+    },
+    {
+      "id": 123,
+      "title": "MacBook Air M2",
+      "category": "laptops",
+      "price": 1299.99
+    },
+    {
+      "id": 124,
+      "title": "Razer Blade 15",
+      "category": "laptops",
+      "price": 1899.99
+    },
+    {
+      "id": 125,
+      "title": "Oculus Quest 2",
+      "category": "accessories",
+      "price": 299.99
+    },
+    {
+      "id": 126,
+      "title": "Sony PlayStation 5",
+      "category": "accessories",
+      "price": 499.99
+    },
+    {
+      "id": 127,
+      "title": "Google Pixel 6 Pro",
+      "category": "smartphones",
+      "price": 899.99
+    },
+    {
+      "id": 128,
+      "title": "Dell Inspiron 15",
+      "category": "laptops",
+      "price": 749.99
+    },
+    {
+      "id": 129,
+      "title": "Bose QuietComfort 45",
+      "category": "accessories",
+      "price": 329.99
+    },
+    {
+      "id": 130,
+      "title": "Apple Magic Mouse 2",
+      "category": "accessories",
+      "price": 79.99
+    }
+  ]
+}
